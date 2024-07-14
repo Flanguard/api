@@ -1,14 +1,14 @@
-package med.voll.api.medico;
+package med.voll.api.domain.medico;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
-import med.voll.api.direccion.DatosDireccion;
+import med.voll.api.domain.direccion.DatosDireccion;
 
 public record DatosRegistroMedico(
         @NotBlank
         String nombre,
-        @NotBlank
-        @Email
+        @NotBlank(message = "{email.obligatorio}")
+        @Email(message = "{email.invalido}")
         String email,
         @NotBlank
         String telefono,

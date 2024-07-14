@@ -1,12 +1,9 @@
-package med.voll.api.direccion;
+package med.voll.api.domain.direccion;
 
 import jakarta.persistence.Embeddable;
-import jakarta.persistence.Embedded;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
-import static org.apache.logging.log4j.util.Cast.cast;
 
 @Embeddable
 @Getter
