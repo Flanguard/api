@@ -1,1 +1,1 @@
-insert into usuarios values(2, 'ana.souza@voll.med', '$2a$10$Y50UaMFOxteibQEYLrwuHeehHYfcoafCopUazP12.rqB41bsolF5.');
+insert into usuarios values(2, 'Amaury', '$2a$12$EPtbf66xyrE5M.2P4Bf/J.r6s/Ikx1K1VVLCBlxqUKDMuwS/.Z4h6');

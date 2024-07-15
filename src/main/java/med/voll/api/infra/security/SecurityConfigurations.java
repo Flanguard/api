@@ -33,7 +33,10 @@ public class SecurityConfigurations {
 //Con esto le estoy autorizando a aquellos request que tengan el verbo POST y el recursos
 //el recurso /login  poder hacer su request y a cualquier otra request deben estar autenticadas.
                         .requestMatchers(HttpMethod.POST, "/login").permitAll()
-                        .anyRequest().authenticated()
+                                .requestMatchers("/swagger-ui.html", "/v3/api-docs/**", "/swagger-ui/**").permitAll()
+                                .requestMatchers(HttpMethod.DELETE, "/medicos").hasRole("ADMIN")
+                                .requestMatchers(HttpMethod.DELETE, "/pacientes").hasRole("ADMIN")
+                                .anyRequest().authenticated()
                 )
                 .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
